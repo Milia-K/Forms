@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="normalize.css" />
+    <title>Registration</title>
+</head>
+<body class="container">
+    <h1>Форма регистрации пользователя: </h1>
+    <div class="list">
+        <form name="registrationForm" >
+        <div class="section">
+            <div><label for="name"><h3>Данные пользователя:</h3></div>
+            <div><input type="text" id="name" name="name" placeholder="Ваше имя:"  required minlength="2" maxlength="20"></div>
+
+        <div class="section">
+            <div><label for="email"><h3>Email:</h3></label></div>
+            <div><input type="email" id="email" name="email" placeholder="E-Mail"  required>
+        </div>
+
+        <div class="section">
+            <div><label for="age"><h3>Возраст:</h3></label></div>
+            <div><input type="number" id="age" name="age" placeholder="Введите ваш возраст" required></div>
+        </div>
+
+        <div class="section">
+            <div><label><h3>Пол:</h3></label></div>
+            <input type="radio" name="gender" value="male" id="male" />
+            <label for="man">Мужчина</label> 
+            <input type="radio" name="gender" value="female" id="female" />
+            <label for="woman">Женщина</label> 
+        </div>
+
+        <div class="section">
+            <div><label for="profession"><h3>Ваша профессия:</h3></label></div>
+            <div><select  id="profession" name="profession" required>
+                <option value="" disabled selected>-- Выберите профессию --</option>
+                <option value="doctor">Врач</option>
+                <option value="programmer">Программист</option>
+                <option value="teacher">Учитель</option>
+                <option value="designer">Дизайнер</option>
+                <option value="engineer">Инженер</option>
+                <option value="salesman">Продавец</option>
+                <option value="other">Другое</option>
+            </select>
+            </div>
+        </div>
+
+        <div class="section">
+            <label for="password"><h3>Пароль:</h3></label>
+            <input type="password" id="password" name="password" placeholder="Введите пароль" required minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+        </div>
+        
+        <div class="section">
+            <label for="confirmPassword"><h3>Повторите пароль:</h3></label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Повторите пароль" required minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+        </div>
+
+        <div class="section">
+            <label for="consent"><h3>Согласие на обработку данных:</h3></label>
+            <input type="checkbox" id="consent" name="consent" required>
+            Нажимая на кнопку "Согласие", я даю согласие на обработку персональных данных.
+        </div>
+
+        <button id="btn" type="submit">Регистрация</button>
+
+        </form>
+        <script src="./script.js"></script>
+</body>
+</html>
